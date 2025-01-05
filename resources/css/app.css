@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+
+
+body {
+    font-family: "Nunito Sans", sans-serif !important;
+
+}
+
+
+
+* {
+    font-family: "Nunito Sans", sans-serif !important;
+    scroll-behavior: smooth !important;
+}
+
+:root {
+    --text-white: white;
+    --text-custom-orange: #ff766e;
+    --text: #0f2137;
+    --background: #f8fafc;
+    --background-purple: #515070;
+    --primary: #ff5f6d;
+    --secondary: #dedcff;
+    --accent: #ffc371;
+    --green: #3fdbb1;
+    --link: #3183ff;
+
+}
+
+
+
+
+html,
+html a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+li,
+dl,
+th,
+dt,
+input,
+textarea,
+span,
+div {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+}
+
+
+
+.container {
+    /* max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px; */
+}
+
+
+.img-hover-effect {
+    position: relative;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.img-hover-effect::before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(rgba(132, 159, 184, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+
+.feature-wrap:hover .img-hover-effect::before {
+    opacity: 1;
+    transform: translateY(5px);
+    z-index: 9;
+}
+
+.feature-wrap:hover .img-hover-effect {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+[type='text']:focus{    --tw-ring-color: transparent; border-color: transparent;}
+
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.swiper-pagination-bullet {
+    background-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    margin-bottom: 2rem !important;
+    transition: all 0.4s ease-in-out !important;
+}
+
+
+@layer components {
+    .swiper-pagination-bullet-active {
+        @apply !shadow-lg !rounded-full;
+    }
+}
+
+
+@layer components {
+    .MuiAutocomplete-inputRoot {
+        @apply  !p-10
+    }
+}
+
+
+@layer components {
+    .left-sidebar > .MuiDrawer-paper {
+        @apply  !bg-gradient-org-red !border-0
+    }
+}
+
+
+
+@layer components {
+    .MuiDataGrid-cell {
+        @apply  text-base
+    }
+}
+
+
+
+
+
+
+@layer components {
+    .MuiDataGrid-columnHeaders {
+        @apply  !bg-gray-100
+    }
+}
+
+@layer components {
+    .MuiDataGrid-row--borderBottom {
+        @apply  !bg-gray-100
+    }
+}
+
+
+
+@layer components {
+    .MuiDataGrid-footerContainer {
+        @apply  !bg-gray-100
+    }
+}
+
+
+
+@layer components {
+    .MuiDataGrid-cell {
+        @apply  !px-5
+    }
+}
+
+
+@layer components {
+    .MuiDataGrid-columnHeader {
+        @apply  !px-5
+    }
+}
+
+
+@layer components {
+    .left-sidebar .MuiDrawer-paper {
+        @apply  !top-0
+    }
+}
+
+@layer components {
+    .radio-bg {
+        @apply  !bg-slate-100 rounded-full justify-center py-2
+
+    }
+}
+
+
+
+
+
+.MuiPaper-elevation{box-shadow: none !important;}
+
+
+@layer base {
+
+    /* width */
+    ::-webkit-scrollbar {
+      @apply w-2
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      @apply bg-slate-100	
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      @apply bg-slate-300	 dark:bg-violet-600 rounded-md
+    }
+    
+  }
+
+
+  ::-webkit-scrollbar:horizontal{
+    height: 5px;
+
+  }
+  ::-webkit-scrollbar-thumb:horizontal{
+    @apply bg-slate-300	 dark:bg-violet-600 rounded-md
+          
+      }
+
+
+/*============Responsive============*/
+
+/*Mobile*/
+
+@media(max-width:767px) {
+
+    body {
+        background-color: #f0f0f0 !important;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+
+
+
+    @layer components {
+        .left-sidebar .MuiDrawer-paper {
+            @apply  top-16
+        }
+    }
+
+
+ 
+
+}
+
+
+
+
+/* @media only screen and (max-width: 1600px) {
+    .container {
+        max-width: 1170px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+ 
+
+} */
+
+/* @media (max-width: 1199px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+} */
+
+
+
+
+
+
+@media (min-width: 1850px) and (max-width: 2500px) {
+    .large-scr {
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+    }
+}
+
+/* .swiper-pagination-bullet-active .custom-bullet {
+    box-shadow: 0px 14px 40px rgba(132, 159, 184, 0.12);
+} */
+
+/* .swiper-pagination-bullet-active {
+
+    box-shadow: 0px 14px 40px rgba(132, 159, 184, 0.12) !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

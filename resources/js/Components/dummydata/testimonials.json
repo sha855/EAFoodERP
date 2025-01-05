@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Mariana Dickey",
+        "profession": "UI Designer",
+        "image": "/assets/testimonials-1.png"
+    },
+    {
+        "name": "Jonathan Taylor",
+        "profession": "CEO at Creativex",
+        "image": "/assets/testimonials-1.png"
+    },
+    {
+        "name": "Krish kendall",
+        "profession": "Creative Director",
+        "image": "/assets/testimonials-1.png"
+    }
+]
